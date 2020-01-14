@@ -1,0 +1,73 @@
+<templateSet group="angular-testing">
+  <template name="desc" value="describe('$NAME$', function() {&#10;    $END$&#10;});" description="Describe for Karma Tests" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="it" value="it('should $NAME$', function() {&#10;    $END$&#10;});" description="It should" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="doret" value="mockito4js.doReturn($RESULT$).when($SERVICE$).$METHOD$;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="RESULT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SERVICE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="verify" value="mockito4js.verify($SERVICE$).$METHOD$;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="SERVICE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="donot" value="mockito4js.doNothing().when($SERVICE$).$METHOD$;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="SERVICE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="befe" value="beforeEach(function () {&#10;    $END$&#10;});" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="exp" value="expect($ACTUAL$).toBe($RESULT$);" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ACTUAL" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <variable name="RESULT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="setup" value=" beforeEach(function () {&#10;    module('aemApp');&#10;&#10;    inject(function ($controller, $rootScope, $injector) {&#10;        $END$&#10;    });&#10;});" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="inj" value="$NAME$ = $injector.get('$NAME$');$END$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
+  </template>
+  <template name="spy" value="mockito4js.spy($SPY$);$END$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="SPY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="injspy" value="$NAME$ =  mockito4js.spy($injector.get('$NAME$'));$END$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
+  </template>
+</templateSet>
